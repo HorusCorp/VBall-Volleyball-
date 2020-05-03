@@ -1,38 +1,517 @@
-.App {
+.App{
+  background-color: #eee;
+  min-height: 100vh;
+  padding: 2% 0;
+  height: auto;
+}
+/*NAVBAR MAIN*/
+.navbar{
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:100;
+}
+
+.navbar ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 60px;
+  padding: 0px;
+  margin:0 5%;
+}
+
+.menu-zone{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.menu-zone li{
+  cursor: pointer;
+  padding: 0 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-zone li:hover{
+  background-color: #fff;
+  color: #001D75;
+}
+
+
+
+
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 12px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #001D75;
+  color:#fff;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content .header {
+  background-color: #001D75;
+  color:#fff;
+  padding: 0px 16px;
+}
+
+.header{
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header li{
+  text-transform: uppercase;
+  padding: -10px 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header li:hover{
+  background-color: #fff;
+  color: #001D75;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/*LISTE JOUEURS/JOUEUSES*/
+
+.team_player_number{
+  width: 15%;
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.team_player_nom{
+  width: 25%;
+}
+
+.team_player_prenom{
+  width: 55%;
+}
+
+.team_player_poste{
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 30px;
+}
+.container-for-player{
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+}
+.row_classement_player{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin: 2px 0px;
+}
+
+.team_fem_reg_list{
+  width: 50%;
+}
+
+.team_pic_fem_reg{
+  width: 50%;
+  height: auto;
+  background-image: url('./Img/equipeF.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.team_pic_hom_reg{
+  width: 50%;
+  height: auto;
+  background-image: url('./Img/equipeM.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn-access-classement{
+  background-color: #001D75;
+  border: 2px solid #001D75;
+  color: white;
+  padding: 11px 35px;
+}
+
+.btn-access-classement:hover{
+  background-color: #eee;
+  border: 2px solid #001D75;
+  color: #001D75;
+}
+
+
+
+
+
+
+
+
+.banner_main{
+  width: 100%;
+  height: 500px;
+  background-image: url('./Img/banniere-main-vball.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.banner_partenaires{
+  width: 100%;
+  height: 500px;
+  background-image: url('./Img/partener.png');
+  background-size: cover;
+  background-position: center;
+}
+.annonces_home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #001D75;
+  color: #fff;
+  height: 50px;
+  width: 90%;
+  margin:2% 5% 0 5%;
+  font-weight: bold;
+}
+.important_anounce_covid{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #fff;
+  height: 150px;
+  width: 90%;
+  margin:1% 5%;
+  border-radius: 5px;
+}
+.important_anounce_president{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 300px;
+  text-align: center;
+  width: 90%;
+  margin:1% 5%;
+  border-radius: 5px;
+}
+
+/*Loisirs Loisirs*/
+.loisirs_container{
+  width: 80%;
+  margin-left: 5%;
+  padding:2% 5%;
+  background-color: #fff;
+  margin-bottom: 0.5%;
+}
+
+.blue_bg{
+  margin-top: 100px;
+  width: 80%;
+  margin-left: 5%;
+  padding:1% 5%;
+  background-color: #001D75;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.5%;
+}
+
+.loisirs_container h2,.loisirs_container p{
+  width: 100%;
+  text-align: center;
+}
+
+.loisir_main_img{
+  background-image: url('./Img/LoisirsMain.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.loisir_secondary_img{
+  background-image: url('./Img/Loisir2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+/*Caroussel Caroussel Caroussel Caroussel Caroussel Caroussel*/
+.caroussel_home{
+  height: 90vh;
+  width: 90%;
+  margin:1% 5%;
+}
+
+.displayed_img{
+  width: 900px;
+}
+.img_list{
+  width: 900px;
+  margin-left: 14.7%;
+}
+
+.img_list img{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/*BTN TESTs*/
+
+a{
+  text-decoration: none;
+}
+
+.container-for-center{
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 55px 0;
+}
+
+.btn-test{
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 8px 13px 16px;
+  border-image: url('cmn_btn_base_01.png') 13 23 25 fill stretch;
+  padding: 5px 7px 4px 7px;
+  background: none;
+  line-height: 12px;
+  font-weight: 300;
+  font-family: serif;
   color: white;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-test:hover{
+  border-image: url('cmn_btn_base_01copy.png') 13 23 25 fill stretch;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-test-red{
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 8px 13px 16px;
+  border-image: url('cmn_btn_base_02.png') 13 23 25 fill stretch;
+  padding: 5px 7px 4px 7px;
+  background: none;
+  line-height: 12px;
+  font-weight: 300;
+  font-family: serif;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-test-red:hover{
+  border-image: url('cmn_btn_base_02copy.png') 13 23 25 fill stretch;
+}
+
+.btn-test-red-cancel{
+  width: 10px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 8px 13px 16px;
+  border-image: url('cmn_btn_base_02.png') 13 23 25 fill stretch;
+  padding: 5px 7px 4px 7px;
+  background: none;
+  line-height: 12px;
+  font-weight: 300;
+  font-family: serif;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-test-red-cancel:hover{
+  border-image: url('cmn_btn_base_02copy.png') 13 23 25 fill stretch;;
+}
+.four_card_home{
+  margin-top: 50px;
+  padding: 115px 0px;
+}
+.row_calendar{
+  display: flex;
+  background-color: #fff;
+  height: 50px;
+  width: 90%;
+  margin-left: 5%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.team_one_name{
+  display:flex;
+  justify-content: flex-end;
+  width: 40%;
+}
+
+.team_two_name{
+  width: 40%;
+}
+
+.result_header{
+  display: flex;
+  background-color: #001D75;
+  color: white;
+  height: 50px;
+  width: 90%;
+  margin-left: 5%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.new_products_home{
+  margin: 0 0 75px 0;
+}
+
+
+
+
+/*Classement zone*/
+.row_classement{
+  display: flex;
+  background-color: #fff;
+  height: 50px;
+  width: 90%;
+  margin-left: 5%;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.classement_col_one,.classement_col_two{
+  width: 50%;
+}
+.team_rank{
+  width: 20px;
+  margin-left: 10px;
+}
+.team_name{
+  width: 80%;
+  margin-left: 10px;
+}
+
+.team_victory,.team_defeat,.team_playedMatch{
+  width: 40px;
+  display: flex;
+  justify-content: center
+}
+
+.team_point{
+  width: 60px;
+  display: flex;
+  justify-content: center;
+}
+.row_classement .team_point{
+color:#5EC015;
+}
+
+.team_logo_empty{
+  width: 40px;
+}
+
+
+/*EDIT-zone*/
+.width-edit{
+  width: 90%;
+  margin-left: 5%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+/*CARD PARTNER*/
+
+.partner_card{
+  width: 80%;
+  margin-left: 5%;
+  background-color: #fff;
+  margin: 1% 5%;
+  padding:  2% 5%;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.logo_1986{
+  background-image: url('./Img/1986logo.png');
+  background-size: cover;
+  width: 238px;
+  height: 218px;
+}
+.logo_ninkasi{
+  background-image: url('./Img/ninkasi-sans-souci.png');
+  background-size: cover;
+  width: 238px;
+  height: 140px;
+}
+.logo_droguerie{
+  background-image: url('./Img/droguerie.png');
+  background-size: cover;
+  width: 238px;
+  height: 218px;
+}
+.text_card{
+  width: 85%;
+  margin-left: 5%;
+}
+.text_card div:nth-child(1){
+  margin-bottom: 25px;
+}
+.text_card div{
+  margin:8px 0;
+}
+.link_card{
+  border-top: 2px solid #eee;
 }
